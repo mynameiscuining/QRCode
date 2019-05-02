@@ -5,4 +5,4 @@
 
 VCard
 ===
-![Image text](https://raw.githubusercontent.com/mynameiscuining/QRCode/master/QRCode/vcard.png)
+![Image text](https://github.com/mynameiscuining/QRCode/blob/master/vcard.jpg)
