@@ -10,10 +10,11 @@ import java.io.IOException;
 
 public class QRcode {
     public static void main(String[] args) throws IOException {
-        
+        int version=7;
         String params="www.baidu.com";
-        int width=300;
-        int height=300;
+        //公式
+        int width=67+12*(version-1);
+        int height=67+12*(version-1);
     
     
         BufferedImage bufferedImage=new BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);
@@ -31,7 +32,7 @@ public class QRcode {
         //中文,日文可选择B
         x.setQrcodeEncodeMode('B');
         //版本号
-        x.setQrcodeVersion(7);
+        x.setQrcodeVersion(version);
         byte[] d =params.getBytes();
         if (d.length>0 && d.length <120){
             boolean[][] s = x.calQrcode(d);
